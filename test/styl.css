@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&family=Poppins:wght@300&display=swap');
+*{
+margin : 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html{
+
+    font-family: Lato;
+    
+    background-color:lightblue ;
+}
+
+body {
+height: 100vh;
+width: 80%;
+margin:0 auto;
+display: grid;
+grid-template-columns: 1fr 15%;
+grid-template-rows: 15% 10% 60% 15%;
+grid-template-areas: 
+'h h'
+'n n'
+'s a'
+'f f';
+}
+
+
+header{
+background-color: red;
+grid-area: h;
+border: solid 1px;
+border-bottom: 0px;
+display: flex;
+justify-content: center;
+align-items: center ;
+}
+
+
+nav{
+background-color: yellow;
+grid-area: n;
+border: solid 1px;
+
+
+}
+
+
+nav .container ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin-top: 40px;
+    
+}
+nav .container ul li{
+    background-color:lightblue;
+
+}
+nav .container ul li:hover{
+    background-color:lightcoral;
+
+}
+nav a{
+    color: lightcoral;
+    transition: all 0.25s linear;
+}
+
+nav a:hover{
+font-size: 107%;
+color:lightblue;
+}
+
+
+section{
+    grid-area: s;
+    background-color:white;
+    border: solid 1px;
+    
+    
+}
+
+
+section .mainPic img{
+    width:300px;
+    height: 200px;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+aside{
+background-color: turquoise;
+grid-area: a;
+border: solid 1px;
+text-align: center;
+
+
+
+}
+aside ul{
+    
+    list-style-type: none;
+    
+}
+aside ul img{
+    
+
+    margin-top: 1em;
+    align-items: center ;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+footer{
+    background-color: green;
+    grid-area: f;
+    border: solid 1px;
+    flex-direction: row;
+    display: flex;
+    justify-content:space-between
+}
+
+
+
+.navbar {
+    background-color: yellow;
+   
+}
+
+
+
+
+
+section p{
+    font-size: 12px;
+    font-family: Tahoma;
+    color: grey;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.formular{
+    margin: 10px;
+    height:167px ;
+    width:204px ;
+    background-image: url("box.gif");
+   
+}
+.obrMapa{
+position: relative;
+top: 115px;
+left: 115px;
+
+}
+.innerForm{
+    margin-left: 10px;
+}
+.innerForm a{
+    
+    font-size: 15px;
+    text-decoration: none;
+}
+.innerForm a:hover{
+    text-decoration: underline;
+}
+.innerForm a:link{
+    color: rgb(204,0,51);
+
+}
+.innerForm a:visited{
+    color:rgb(204,0,51);
+
+}
+
+.videoPlayer{
+    max-width: 100%;
+    max-height: 100%;
+    
+}
