@@ -30,7 +30,7 @@ grid-template-areas:
 header{
 background-color: red;
 grid-area: h;
-border: solid 1px;
+
 border-bottom: 0px;
 display: flex;
 justify-content: center;
@@ -39,20 +39,24 @@ align-items: center ;
 
 
 nav{
+    box-sizing: content-box;
 background-color: yellow;
 grid-area: n;
-border: solid 1px;
 
+height: 10vh;
 
+justify-content: space-between;
+width: 100%;
 }
 
 
 nav .container ul {
+   
+    list-style-type: none;
+    
     display: flex;
     justify-content: space-evenly;
-    list-style-type: none;
-    margin-top: 40px;
-    
+    align-content: center;
 }
 nav .container ul li{
     background-color:lightblue;
@@ -63,8 +67,14 @@ nav .container ul li:hover{
 
 }
 nav a{
+    display:block;
+    text-align: center;
+    
+    
+    line-height: 10vh;
     color: lightcoral;
     transition: all 0.25s linear;
+
 }
 
 nav a:hover{
@@ -76,25 +86,27 @@ color:lightblue;
 section{
     grid-area: s;
     background-color:white;
-    border: solid 1px;
+    
     
     
 }
 
 
 section .mainPic img{
-    width:300px;
-    height: 200px;
-    max-width: 100%;
-    max-height: 100%;
+    width: 30%;
+    
+
+    
     
 }
 
 aside{
 background-color: turquoise;
 grid-area: a;
-border: solid 1px;
+
+
 text-align: center;
+flex-direction: column;
 
 
 
@@ -106,17 +118,14 @@ aside ul{
 }
 aside ul img{
     
-
-    margin-top: 1em;
-    align-items: center ;
-    max-width: 100%;
-    max-height: 100%;
+    width: 80%;
+    height: 80%;
     
 }
 footer{
     background-color: green;
     grid-area: f;
-    border: solid 1px;
+   
     flex-direction: row;
     display: flex;
     justify-content:space-between
@@ -174,8 +183,20 @@ left: 115px;
 
 }
 
-.videoPlayer{
-    max-width: 100%;
-    max-height: 100%;
-    
+@media screen and (max-width:550px) {
+
+    body{
+        display: block;
+        height: fit-content;
+    } 
+
+
+}
+
+@media screen and (max-width:660px) {
+    .body{
+        display: block;
+        height: fit-content;
+    }
+
 }
